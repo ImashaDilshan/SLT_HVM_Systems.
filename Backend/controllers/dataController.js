@@ -23,9 +23,10 @@ async function getDataByDateAndFilter(req, res) {
     );
 
     if (tableCheck.length === 0) {
-      return res.status(404).json({
-        success: false,
-        message: `❌ Data Sheet '${tableName}' not found.`,
+      return res.json({
+        success: true,
+        data: [],
+        message: `NOTE: Data Sheet '${tableName}' does not exist yet.`,
       });
     }
 

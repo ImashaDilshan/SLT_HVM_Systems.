@@ -38,6 +38,30 @@ exports.summarizeWithRows = async (req, res) => {
 
     if (!table) return res.status(400).json({ error: "table is required" });
     const tableName = safeTableName(table);
+    
+    // Check if table exists
+    const [tableExists] = await db.query(`SHOW TABLES LIKE ?`, [tableName]);
+    if (tableExists.length === 0) {
+       return res.json({ rows: [], summary: {
+          rentalAmount: 0,
+          otAmount: 0,
+          overnightAmount: 0,
+          excessAmount: 0,
+          total: 0,
+          absentDeduction: 0,
+          absentAfterTotal: 0,
+          advanceLabel: "0% Advanced Amount",
+          advanceAmount: 0,
+          balanceAfterAdvance: 0,
+          includeVAT: !!includeVAT,
+          vatPercent: Number(vatPercent || 0),
+          vatAmount: 0,
+          netAmount: 0,
+          table: tableName,
+          filters,
+          rowCount: 0
+       }});
+    }
 
     // WHERE clause
     const whereParts = [];
