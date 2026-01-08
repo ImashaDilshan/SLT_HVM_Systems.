@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+backend.log
+npm-debug.log
+yarn-error.log
+
+# Runtime data
+pid
+*.pid
+*.seed
+*.pid.lock
+
+# Editor/OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary scripts (Agent created)
+check_db.js
+verify_connection.js
