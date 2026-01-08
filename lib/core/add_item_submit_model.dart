@@ -23,7 +23,7 @@ class AddItemSubmitRepository {
       'data': [cleanData], // Backend expects a list of rows
     };
     final response = await dio.post(
-      'http://localhost:3000/api/add_item',
+      'https://dpdlab1.slt.lk:9126/api/add_item',
       data: payload,
     );
 
@@ -36,7 +36,7 @@ class AddItemSubmitRepository {
   }
   Future<String> updateItem(Map<String, dynamic> data) async {
     final response = await dio.put(
-      'http://localhost:3000/api/update-data',
+      'https://dpdlab1.slt.lk:9126/api/update-data',
       data: data,
     );
 

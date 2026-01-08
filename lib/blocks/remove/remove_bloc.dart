@@ -19,7 +19,7 @@ class RemoveBloc extends Bloc<RemoveEvent, RemoveState> {
     try {
       print('Removing role: ${event.role} from ${event.tableName} at ${event.location} in ${event.mode} mode');
        final res = await dio.put(
-        'http://localhost:3000/api/remove-role', // 🔁 your backend endpoint
+        'https://dpdlab1.slt.lk:9126/api/remove-role', // 🔁 your backend endpoint
         data: {
           'tableName': event.tableName,
           'location': event.location,

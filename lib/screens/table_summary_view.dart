@@ -13,7 +13,7 @@ import 'dart:io' as io; // For Windows
 import 'package:slt_hire_log/blocks/SharedData/shared_data_state.dart';
 
 /// ---- CONFIG ----
-const String kBaseUrl = 'http://localhost:3000';
+const String kBaseUrl = 'https://dpdlab1.slt.lk:9126';
 
 /// ---- MODELS ----
 class TableSummaryPayload {

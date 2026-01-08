@@ -8,7 +8,7 @@ class AddItemRepository {
   AddItemRepository(this.dio);
 
   Future<Map<String, List<String>>> fetchVehicleData(int costCenter) async {
-    final response = await dio.get('http://localhost:3000/api/vehicles/$costCenter');
+    final response = await dio.get('https://dpdlab1.slt.lk:9126/api/vehicles/$costCenter');
     final data = response.data as List;
 
     final Set<String> refNos = {};

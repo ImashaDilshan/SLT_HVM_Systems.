@@ -11,7 +11,7 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
       emit(DashboardLoading());
       try {
         final response = await Dio().post(
-          '${dotenv.env['BASE_URL']}/api/get-data',
+          '${dotenv.env['BASE_URL']}/get-data',
           data: {
             'tableName': event.tableName,
             'location': event.location,

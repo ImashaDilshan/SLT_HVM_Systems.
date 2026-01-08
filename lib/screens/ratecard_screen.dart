@@ -354,7 +354,7 @@ class _RateCardScreen1State extends State<RateCardScreen1>
   }
 
   Future<void> _updateMonthlyRate(Map<String, dynamic> data) async {
-    final dio = Dio(BaseOptions(baseUrl: 'http://localhost:3000/api'));
+    final dio = Dio(BaseOptions(baseUrl: 'https://dpdlab1.slt.lk:9126/api'));
     try {
       await dio.put('/ratecards/monthly', data: data);
       ScaffoldMessenger.of(
@@ -368,7 +368,7 @@ class _RateCardScreen1State extends State<RateCardScreen1>
   }
 
   Future<void> _updateDailyRate(Map<String, dynamic> data) async {
-    final dio = Dio(BaseOptions(baseUrl: 'http://localhost:3000/api'));
+    final dio = Dio(BaseOptions(baseUrl: 'https://dpdlab1.slt.lk:9126/api'));
     try {
       await dio.put('/ratecards/daily', data: data);
       ScaffoldMessenger.of(
@@ -383,7 +383,7 @@ class _RateCardScreen1State extends State<RateCardScreen1>
   }
 
   Future<void> _addMonthlyRate(Map<String, dynamic> data) async {
-    final dio = Dio(BaseOptions(baseUrl: 'http://localhost:3000/api'));
+    final dio = Dio(BaseOptions(baseUrl: 'https://dpdlab1.slt.lk:9126/api'));
     try {
       await dio.put('/ratecards/monthlys', data: data); // ✅ /monthly
       ScaffoldMessenger.of(
@@ -398,7 +398,7 @@ class _RateCardScreen1State extends State<RateCardScreen1>
   }
 
   Future<void> _addDailyRate(Map<String, dynamic> data) async {
-    final dio = Dio(BaseOptions(baseUrl: 'http://localhost:3000/api'));
+    final dio = Dio(BaseOptions(baseUrl: 'https://dpdlab1.slt.lk:9126/api'));
     try {
       await dio.put('/ratecards/dailys', data: data); // ✅ /daily
       ScaffoldMessenger.of(
@@ -730,7 +730,7 @@ Widget _numberField(String value, Function(String) onChanged) {
     List<Map<String, dynamic>> monthlyRates,
     List<Map<String, dynamic>> dailyRates,
   ) async {
-    final dio = Dio(BaseOptions(baseUrl: 'http://localhost:3000/api'));
+    final dio = Dio(BaseOptions(baseUrl: 'https://dpdlab1.slt.lk:9126/api'));
 
     try {
       await dio.put(

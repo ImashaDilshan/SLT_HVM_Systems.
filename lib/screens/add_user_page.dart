@@ -84,7 +84,7 @@ class _AddUserPageState extends State<AddUserPage> {
   Future<void> _fetchCostCenters() async {
     setState(() => _loading = true);
     try {
-      final res = await _dio.get('http://localhost:3000/api/admin/cost-centers');
+      final res = await _dio.get('https://dpdlab1.slt.lk:9126/api/admin/cost-centers');
       final data = res.data;
       if (data['success'] == true) {
         setState(() {
@@ -219,7 +219,7 @@ class _AddUserPageState extends State<AddUserPage> {
       };
 
       await _dio.post(
-        'http://localhost:3000/api/admin/user-with-costcenters',
+        'https://dpdlab1.slt.lk:9126/api/admin/user-with-costcenters',
         data: jsonEncode(body),
       );
 

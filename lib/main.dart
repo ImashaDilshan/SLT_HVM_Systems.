@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => OverlayCubit()),
         BlocProvider(create: (_) => NavigationCubit()),
         BlocProvider(create: (_) => MapDistrictCubit()),
-        BlocProvider(create: (_) => CostCenterSearchBloc(Dio(BaseOptions(baseUrl: 'http://localhost:3000')))),
+        BlocProvider(create: (_) => CostCenterSearchBloc(Dio(BaseOptions(baseUrl: 'https://dpdlab1.slt.lk:9126')))),
         BlocProvider(create: (_) => AddItemLoadBloc(AddItemRepository(Dio()))),
         BlocProvider<AdminCalcBloc>(
           create: (_) => AdminCalcBloc(),),

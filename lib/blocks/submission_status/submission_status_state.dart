@@ -16,7 +16,7 @@ class SubmissionStatusBloc extends Bloc<SubmissionStatusEvent, SubmissionStatusS
 
     try {
       print("🔍 Sending request: ${event.costCenterId}, ${event.month}, ${event.mode}");
-      final response = await dio.get('/api/submission-status', queryParameters: {
+      final response = await dio.get('/submission-status', queryParameters: {
         'costCenterId': event.costCenterId,
         'month': event.month,
         'mode': event.mode,

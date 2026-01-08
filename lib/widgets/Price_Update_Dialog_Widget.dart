@@ -36,7 +36,7 @@ class _FuelPriceUpdateDialogState extends State<FuelPriceUpdateDialog> {
     try {
       final dio = Dio();
       final response = await dio.post(
-        'http://localhost:3000/api/calculate',
+        'https://dpdlab1.slt.lk:9126/api/calculate',
         data: {
           'diesel_price': double.parse(_dieselController.text),
           'petrol_price': double.parse(_petrolController.text),

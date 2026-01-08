@@ -61,7 +61,7 @@ class FuelCalcScreen extends StatelessWidget {
                 try {
                   // Call your backend
                   final response = await http.post(
-                    Uri.parse('http://localhost:3000/api/calculaten'),
+                    Uri.parse('https://dpdlab1.slt.lk:9126/api/calculaten'),
                     headers: {'Content-Type': 'application/json'},
                     body: jsonEncode({'petrol': petrol, 'diesel': diesel}),
                   );

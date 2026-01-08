@@ -9,7 +9,7 @@ Future<String> bulkUpdateRole({
   required String newRole,
 }) async {
   final response = await Dio().post(
-    'http://localhost:3000/api/bulk-update-role',
+    'https://dpdlab1.slt.lk:9126/api/bulk-update-role',
     data: {
       'tableName': tableName,
       'location': location,

@@ -93,7 +93,7 @@ class CostCenterCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => SubmissionStatusBloc(
-        Dio(BaseOptions(baseUrl: 'http://localhost:3000')),
+        Dio(BaseOptions(baseUrl: 'https://dpdlab1.slt.lk:9126')),
       )..add(CheckSubmissionStatus(
           costCenterId: costCenterId,
           month: month,

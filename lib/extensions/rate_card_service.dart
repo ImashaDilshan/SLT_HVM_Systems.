@@ -3,7 +3,7 @@ import 'package:slt_hire_log/models/rate_card_models.dart';
 
 class RateCardService {
   final Dio _dio = Dio(BaseOptions(
-    baseUrl: 'http://localhost:3000/api',
+    baseUrl: 'https://dpdlab1.slt.lk:9126/api',
     connectTimeout: Duration(milliseconds: 30000),
     receiveTimeout: Duration(milliseconds: 30000),
   ));

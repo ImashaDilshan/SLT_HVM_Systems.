@@ -11,7 +11,7 @@ class RoleUpdateBloc extends Bloc<SubmitBulkRoleUpdate, RoleUpdateState> {
     on<SubmitBulkRoleUpdate>((event, emit) async {
       emit(RoleUpdateLoading());
       try {
-        final res = await _dio.put('http://localhost:3000/api/update-bulk-role', data: {
+        final res = await _dio.put('https://dpdlab1.slt.lk:9126/api/update-bulk-role', data: {
           'tableName': event.tableName,
           'location': event.location,
           'mode': event.mode,

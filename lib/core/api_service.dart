@@ -4,7 +4,7 @@ import '../models/ratecard.dart';
 
 class ApiService {
   final Dio dio = Dio(BaseOptions(
-    baseUrl: 'http://localhost:3000/api',
+    baseUrl: 'https://dpdlab1.slt.lk:9126/api',
     connectTimeout: Duration(seconds: 15),
     receiveTimeout: Duration(seconds: 15),
     contentType: 'application/json',
